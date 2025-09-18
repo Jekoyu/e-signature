@@ -94,7 +94,7 @@ app.get('/', (req, res) => {
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-    console.log(`API endpoint: http://localhost:${PORT}/encrypt-qr`);
+    console.log(`API endpoint: http://localhost:${PORT}/e-signature`);
 });
 
 module.exports = app;
