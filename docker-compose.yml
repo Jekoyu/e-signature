@@ -4,11 +4,18 @@ services:
   app:
     container_name: rentverse-docs
     build: .
-    ports:
-      - "3000:3000"
+    # ports:
+    #  - "3000:3000"
+    networks:
+      - rentverse-net
     environment:
       - NODE_ENV=production
       - PORT=3000
     env_file:
       - .env
     restart: always
+
+networks:
+  rentverse-net:
+    external: true
+    name: rentverse-net
